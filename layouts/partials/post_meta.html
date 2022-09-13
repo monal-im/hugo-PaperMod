@@ -20,4 +20,8 @@
 
 {{- with ($scratch.Get "meta") }}
 {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end }}
+
+{{- if (.Param "ShowRssButtonInSectionTermList") -}}
+<a href="/index.xml" rel="noopener noreferrer" target="_blank">&nbsp;RSS</a>
 {{- end -}}
